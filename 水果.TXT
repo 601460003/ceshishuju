@@ -1,0 +1,12 @@
+<view>
+    <view wx:for="{{arrList}}" wx:key="index">
+        <view  style="margin-bottom: 10px">
+            <view >
+                <view  wx:if="{{item.data&&item.data<30}}" >体温：未佩戴</view>
+                <view  wx:elif="{{item.data>=30&&item.data<37.3}}">体温:{{item.data}}</view>
+                <view  wx:elif="{{item.data>=37.3&&item.data<43}}" style="color: red">体温:{{item.data}}</view>
+                <view  wx:elif="{{item.data>=42}}">体温:异常体温</view>
+            </view>
+        </view>
+    </view>
+</view>
